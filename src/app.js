@@ -8,7 +8,7 @@ const app = express();
 app.get("/", (req, res) => {
   axios
     .get(`${BASE_URL}`)
-    .then((result) => res.send(result.data.slice(0, 3)))
+    .then((result) => res.send(result.data))
     .catch((error) => console.error(error));
 });
 
